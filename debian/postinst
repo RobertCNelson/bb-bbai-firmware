@@ -16,6 +16,10 @@ set -e
 # for details, see http://www.debian.org/doc/debian-policy/ or
 # the debian-policy package
 
+if [ ! -f /lib/firmware/brcm/brcmfmac43455-sdio.txt ] ; then
+	cp -v /lib/firmware/brcm/brcmfmac43455-sdio.beagleboard.org,am5729-beagleboneai.txt /lib/firmware/brcm/brcmfmac43455-sdio.txt
+fi
+
 case "$1" in
 	configure)
 		systemctl enable bb-bbai-tether.service || true
