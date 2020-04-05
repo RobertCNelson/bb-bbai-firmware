@@ -8,8 +8,8 @@ Standards-Version: 3.9.6
 
 Package: bb-bbai-firmware
 Architecture: all
-Pre-Depends: bb-usb-gadgets, firmware-brcm80211, bb-wl18xx-firmware
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Pre-Depends: firmware-brcm80211, bb-wl18xx-firmware
+Depends: ${shlibs:Depends}, ${misc:Depends}, bb-usb-gadgets
 Description: beagleboard.org bbai firmware
  bbai bluetooth firmware
 
